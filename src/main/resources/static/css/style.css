@@ -1,36 +1,56 @@
 body {
     background: url('/images/bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
-.container {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.custom-container {
+    width: 60%;
+    max-height: 80vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
 }
+
+.table-wrapper {
+    overflow-y: auto;
+    max-height: 45vh;
+    border-radius: 8px;
+}
+
+/* Fix the table header while scrolling */
+.fixed-header-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #343a40; /* Same as Bootstrap's table-dark */
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Optional: Smooth scroll and hover effect */
+.table-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
 
 h2 {
     color: #333;
 }
 
-.form-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
 .btn {
-    width: 100%;
-}
-
-.table th, .table td {
-    text-align: center;
+    width: auto;
 }
 
 .table {
-    margin-top: 20px;
+    margin-top: 15px;
 }

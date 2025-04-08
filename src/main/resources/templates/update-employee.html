@@ -2,29 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Update Employee</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/update-style.css}" />
 </head>
 <body>
-<div class="container">
-    <h2 class="text-center my-4">Update Employee</h2>
-    <div class="form-container">
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="custom-container">
+        <h2 class="text-center mb-4">Update Employee</h2>
         <form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
             <input type="hidden" th:field="*{id}" />
             <div class="mb-3">
                 <label class="form-label">Name:</label>
-                <input type="text" class="form-control" th:field="*{name}" required/>
+                <input type="text" class="form-control" th:field="*{name}" placeholder="Update full name" required/>
             </div>
             <div class="mb-3">
                 <label class="form-label">Email:</label>
-                <input type="email" class="form-control" th:field="*{email}" required/>
+                <input type="email" class="form-control" th:field="*{email}" placeholder="Update email address" required/>
             </div>
             <div class="mb-3">
                 <label class="form-label">Department:</label>
-                <input type="text" class="form-control" th:field="*{department}" required/>
+                <input type="text" class="form-control" th:field="*{department}" placeholder="Update department" required/>
             </div>
-            <button type="submit" class="btn btn-warning">Update Employee</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-warning">Update Employee</button>
+            </div>
         </form>
     </div>
 </div>
+
 </body>
 </html>
